@@ -20,3 +20,8 @@ body {
   color: rgb(var(--foreground-rgb));
   background: white
 }
+
+.contrast-img {
+  /* filter: contrast(120%); */
+  filter: brightness(0.8);
+}

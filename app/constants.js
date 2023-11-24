@@ -36,3 +36,31 @@ export const cards = [
     text: "cryptoraggies",
   },
 ];
+
+export const bannerImages = [
+  {
+    text: "heritage womens tank",
+    position: "right",
+    img: "https://bravaland.com/cdn/shop/files/DSC09618_CAROUSEL_1_1440x650_crop_center.jpg?v=1691318279",
+  },
+  {
+    text: "premium tees",
+    position: "left",
+    img: "https://bravaland.com/cdn/shop/files/DSC09179_CAROUSEL_1_1440x650_crop_center.jpg?v=1691318279",
+  },
+  {
+    text: "premium zip hoodies",
+    position: "left",
+    img: "https://bravaland.com/cdn/shop/files/DSC00198_CAROUSEL_1_1440x650_crop_center.jpg?v=1691318278",
+  },
+  {
+    text: "heritage tees",
+    position: "right",
+    img: "https://bravaland.com/cdn/shop/files/DSC09802_carousel_1440x650_crop_center.jpg?v=1691318279",
+  },
+  //   {
+  //     text: "heritage hoodies",
+  //     position: "right",
+  //     img: "https://bravaland.com/cdn/shop/files/DSC09179_CAROUSEL_1_1440x650_crop_center.jpg?v=1691318279",
+  //   },
+];

@@ -5,7 +5,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import Card from "./Components/Card";
-import { cards } from "./constants";
+import { cards, bannerImages } from "./constants";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
@@ -14,7 +14,7 @@ export default function Home() {
           VISIT US ON TIKTOK @BRAVALAND.COM
         </p>
       </div>
-      <nav className="bg-[#212122] text-white text-[1rem] flex justify-between items-center w-full sticky top-[0px] py-2">
+      <nav className="bg-[#212122] text-white text-[1rem] flex justify-between items-center w-full sticky top-[0px] z-[100] py-2">
         <ul className="ml-8 flex space-x-4 [&>*]:cursor-pointer">
           <li>brands</li>
           <li>shop</li>
@@ -50,7 +50,29 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-      <banner></banner>
+      <banner className="w-full">
+        {bannerImages.map((img) => {
+          let style = {};
+          style[img.position] = "150px";
+          return (
+            <div className="w-[100vw] relative">
+              <img className="w-full contrast-img" src={img.img} />
+              <div
+                style={style}
+                className="absolute right-[20px] bottom-[50%] transform translate-y-1/2 "
+              >
+                {img.text.split(" ").map((word) => {
+                  return (
+                    <p className="whitespace-pre-line font-[700] text-white  text-[4rem] ">
+                      {word}
+                    </p>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </banner>
       <div className="my-8 bg-[white] w-full flex space-x-4 overflow-x-scroll ">
         {cards.map((card) => (
           <Card color={card.color} image={card.image} text={card.text} />

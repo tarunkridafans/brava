@@ -4,7 +4,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-
+import Card from "./Components/Card";
+import { cards } from "./constants";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
@@ -49,7 +50,12 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-      <div className="min-h-[2000px] w-full bg-slate-600"></div>
+      <banner></banner>
+      <div className="my-8 bg-[white] w-full flex space-x-4 overflow-x-scroll ">
+        {cards.map((card) => (
+          <Card color={card.color} image={card.image} text={card.text} />
+        ))}
+      </div>
     </main>
   );
 }

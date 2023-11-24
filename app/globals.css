@@ -22,6 +22,5 @@ body {
 }
 
 .contrast-img {
-  /* filter: contrast(120%); */
   filter: brightness(0.8);
 }

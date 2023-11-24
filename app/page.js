@@ -6,6 +6,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import Card from "./Components/Card";
 import { cards, bannerImages } from "./constants";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
@@ -54,20 +55,24 @@ export default function Home() {
         {bannerImages.map((img) => {
           let style = {};
           style[img.position] = "150px";
+
           return (
-            <div className="w-[100vw] relative">
+            <div className="w-[100vw] h-[75vh] relative">
               <img className="w-full contrast-img" src={img.img} />
               <div
                 style={style}
-                className="absolute right-[20px] bottom-[50%] transform translate-y-1/2 "
+                className="absolute w-fit flex flex-col right-[20px] bottom-[50%] transform translate-y-1/2 "
               >
                 {img.text.split(" ").map((word) => {
                   return (
-                    <p className="whitespace-pre-line font-[700] text-white  text-[4rem] ">
+                    <p className=" leading-[5rem] whitespace-pre-line inline-block font-[700] text-white  text-[5rem] m ">
                       {word}
                     </p>
                   );
                 })}
+                <button className="cursor-pointer mt-6 bg-[white] font-[600] w-fit mx-auto rounded-[25px] px-8 py-3">
+                  shop now{" "}
+                </button>
               </div>
             </div>
           );

@@ -39,7 +39,7 @@ export const cards = [
 
 export const bannerImages = [
   {
-    text: "heritage womens tank",
+    text: "heritage women's tank",
     position: "right",
     img: "https://bravaland.com/cdn/shop/files/DSC09618_CAROUSEL_1_1440x650_crop_center.jpg?v=1691318279",
   },
